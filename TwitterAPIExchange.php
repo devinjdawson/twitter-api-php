@@ -160,8 +160,9 @@ class TwitterAPIExchange
         {
             if ($field !== '')
             {
-                list($key, $value) = explode('=', $field);
-                $params[$key] = $value;
+                $z = explode('=', $field);
+                $key = $z[0];
+                if (isset ($z[1])) $value = $z[1];
             }
         }
 
